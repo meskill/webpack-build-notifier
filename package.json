@@ -35,7 +35,11 @@
   "author": "Rocco Cataldo <roccocataldo@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^9.8.1",
+    "css-loader": "^3.6.0",
+    "extract-css-chunks-webpack-plugin": "^4.7.5",
     "node-notifier": "6.0.0",
+    "postcss-loader": "^3.0.0",
     "strip-ansi": "^5.2.0"
   },
   "devDependencies": {

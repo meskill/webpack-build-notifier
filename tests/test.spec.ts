@@ -228,5 +228,15 @@ describe('Test Webpack build', () => {
           done();
         });
       });
+
+      it('Should not hang', (done) => {
+        const onComplete = jest.fn();
+        expect.assertions(2);
+        webpack(getWebpackConfig({}, 'bug'), (err, stats) => {
+          expect(err).toBeNull();
+          expect(onComplete).toHaveBeenCalledWith(expect.any(Object), CompilationStatus.WARNING);
+          done();
+        });
+      });
     });
 });
